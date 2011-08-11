@@ -4,6 +4,10 @@ RubyCSS is a class system that generates css from plain ruby declarations.
 
 For examples, see the test/ subdirectory.
 
+= Installation
+
+run 'rake install'
+
 == Copyright
 
 Copyright (c) 2011 John-John Tedro. See LICENSE.txt for
