@@ -189,11 +189,27 @@ module RubyCSS
     end
 
     def -(other)
-      Color.new(@color.zip(other.color).map{|a,b| a - b})
+      if other.kind_of? Color
+        return Color.new(@color.zip(other.color).map{|a,b| a - b})
+      end
+
+      if other.kind_of? Array
+        return +(Color.new(*other))
+      end
+
+      send(:-, Color.new(other))
     end
 
     def +(other)
-      Color.new(@color.zip(other.color).map{|a,b| a + b})
+      if other.kind_of? Color
+        return Color.new(@color.zip(other.color).map{|a,b| a + b})
+      end
+
+      if other.kind_of? Array
+        return +(Color.new(*other))
+      end
+
+      send(:+, Color.new(other))
     end
 
     def to_s
