@@ -220,7 +220,7 @@ module RubyCSS
 
 private
     def filter_colors(color)
-      color.map{|i| 0 < i && i < 255 ? i : 0}
+      color.map{|i| 0 < i && i < 256 ? i : 0}
     end
 
     def get_hex(color)

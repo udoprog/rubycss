@@ -187,6 +187,10 @@ module RubyCSS
         klass.extend(ClassMethods)
       end
 
+      def c(*color)
+        Color.new(*color)
+      end
+
       def cached?
         !@cache.nil?
       end
