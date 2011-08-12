@@ -1,3 +1,9 @@
+#
+# The following is a somewhat valid grid css which was generated from http://960.gs
+# and then converted into RubyCSS.
+#
+# The original file is about 360 lines long.
+#
 require 'rubycss'
 
 class GridCss
@@ -44,7 +50,7 @@ class GridCss
 
   # http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
 
-  classes "clearfix:before", "clearfix:after" do
+  select ".clearfix:before", ".clearfix:after" do
     rule :content, "'\\0020'"
     display :block
     overflow :hidden
@@ -53,7 +59,7 @@ class GridCss
     height 0
   end
 
-  classes "clearfix:after" do
+  select ".clearfix:after" do
     rule :clear, :both
   end
 
