@@ -33,14 +33,14 @@ class GridCss
   end
 
   classes :alpha, :margin_left => 0
-  classes :omega, :margin_left => 0
+  classes :omega, :margin_right => 0
 
   (1..12).each do |v|
-    classes "container_12", "grid_#{v}", :width => 60*v + 20*(v-1)
-    classes "container_12", "prefix_#{v}", :padding_left => 80*v
-    classes "container_12", "suffix_#{v}", :padding_right => 80*v
-    classes "container_12", "push_#{v}", :left => 80*v
-    classes "container_12", "pull_#{v}", :left => -80*v
+    select ".container_12 .grid_#{v}", :width => 60*v + 20*(v-1)
+    select ".container_12 .prefix_#{v}", :padding_left => 80*v
+    select ".container_12 .suffix_#{v}", :padding_right => 80*v
+    select ".container_12 .push_#{v}", :left => 80*v
+    select ".container_12 .pull_#{v}", :left => -80*v
   end
 
   classes "clear",
